@@ -154,7 +154,7 @@
  *  |
  *  ---------- misc
  *  |           |
- *  |           --------- 12V_output <- IPBOX9900 only
+ *  |           --------- 12V_output <- IPBOX9900 & ALL CUBEREVO MODELS
  *  |
  *  ---------- tuner (dagoberts tuner entry ;-) )
  *  |           |
@@ -780,6 +780,8 @@ struct ProcStructure_s e2Proc[] =
 	{cProcDir  , "stb/misc"                                                         , NULL, NULL, NULL, NULL, ""},
 #if defined(IPBOX9900) || defined(CUBEREVO_MINI) || defined(CUBEREVO_MINI2) || defined(CUBEREVO_MINI_FTA) || defined(CUBEREVO) || defined(CUBEREVO_250HD) || defined(CUBEREVO_3000HD) || defined(CUBEREVO_2000HD) || defined(CUBEREVO_9500)
 	{cProcEntry, "stb/misc/12V_output"                                              , NULL, proc_misc_12V_output_read, proc_misc_12V_output_write, NULL, ""},
+//#else
+//	{cProcEntry, "stb/misc/12V_output"                                              , NULL, NULL, NULL, NULL, ""},
 #endif
 
 	{cProcDir  , "stb/vmpeg"                                                        , NULL, NULL, NULL, NULL, ""},
@@ -1271,4 +1273,3 @@ MODULE_DESCRIPTION("procfs module with enigma2 support");
 MODULE_AUTHOR("Team Ducktales");
 MODULE_LICENSE("GPL");
 // vim:ts=4
-
